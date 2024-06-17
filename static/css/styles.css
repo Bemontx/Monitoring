@@ -1,0 +1,51 @@
+/* styles.css */
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#imagen {
+    background-image: url('../icon/Telefono-01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    margin-top: 60px;
+    padding-top: 0;
+}
+
+#navbar {
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilos para los ítems de la galería */
+.gallery-item {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre las imágenes */
+.gallery-item img:hover {
+    transform: scale(1.1); 
+}

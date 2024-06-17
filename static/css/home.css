@@ -1,0 +1,34 @@
+/* home.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #00249C, #40CEE4); /* Fondo degradado usando los colores Blue1 y Blue2 */
+}
+
+.welcome-container {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.car-image {
+    width: 300px;
+    height: auto;
+    animation: car-move 3s linear infinite;
+}
+
+@keyframes car-move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+
+.fade-out .welcome-container {
+    opacity: 0;
+}
