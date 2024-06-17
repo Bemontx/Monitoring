@@ -59,10 +59,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    'django.contrib.auth.middleware.AuthenticationMiddleware','whitenoise.middleware.WhiteNoiseMiddleware',
 
 ROOT_URLCONF = 'My_project.urls'
 
@@ -135,6 +132,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ]
 
 # Default primary key field type
